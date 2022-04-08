@@ -9,7 +9,6 @@ from typing import Literal
 
 from fsm import State, StateMachine
 
-
 light_machine: StateMachine[
     Literal["red", "yellow_to_green", "yellow_to_red", "green"], Literal["SWITCH"]
 ] = StateMachine(

@@ -2,7 +2,7 @@ from typing import Literal
 
 import pytest
 
-from fsm import State, StateMachine, InvalidEventError
+from fsm import InvalidEventError, State, StateMachine
 
 
 def test_state_machine_send() -> None:
