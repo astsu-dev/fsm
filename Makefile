@@ -1,5 +1,5 @@
 fmt:
-	isort fsm tests
-	black fsm tests
+	isort fsm tests docs_src
+	black fsm tests docs_src
 test:
 	pytest -vvv tests
