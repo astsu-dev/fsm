@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import Generic, Hashable, Mapping, TypeVar
 
+from fsm.exceptions import InvalidEventError
+
 ST = TypeVar("ST", bound=Hashable)
 ET = TypeVar("ET", bound=Hashable)
 
@@ -8,10 +10,6 @@ ET = TypeVar("ET", bound=Hashable)
 @dataclass(frozen=True)
 class State(Generic[ET, ST]):
     on: dict[ET, ST]
-
-
-class InvalidEventError(Exception):
-    """Will be raised if event is not exists for specific state."""
 
 
 class StateMachine(Generic[ST, ET]):
